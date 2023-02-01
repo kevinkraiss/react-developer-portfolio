@@ -1,38 +1,311 @@
-.App {
-  text-align: center;
+:root{
+    --color1:rgb(137, 154, 136);
+    --color2:#eef0f0;
+    --color3:#d6d9d0;
+    --color4:#b7bdb0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    background-color: var(--color3);
+
+}
+
+img {
+    border-radius: 15px;
+
+}
+
+ul {
+    list-style-type: none;
+    display:inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    
+}
+
+nav {
+    padding-top: 24px;
+    margin-right: 0px;
+    float: right;
+    font-size: 20px;
+    list-style-type: none;
+    display: flex;
+}
+
+#profile-container {
+    margin-left: 20px;
+}
+
+header {
+    background-color: var(--color1);
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--color1);
   }
+  
+header li {
+    float: right;
+    border-bottom-left-radius: 15px;
+}
+  
+header li a {
+    display: block;
+    color: var(--color2);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header a:hover {
+    background-color: var(--color3);
+    color: var(--color1);
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    display: inline-block;
+    font-size: 48px;
+    padding: 5px 0px 5px 20px;
+    color: var(--color2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+    font-size: 36px;
+    padding: 0px 10px 0px 20px;
+    color: var(--color1);
+    text-align: right;
+    width: 15%;
 }
+
+p {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    margin: 10px auto 15px auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#profile-pic {
+    border: solid black 2px;
+    min-width: 200px;
+}
+
+
+
+#work {
+    display: flex;
+    flex-direction: row;
+}
+
+.mini-projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.container1{
+    margin: 20px auto;
+    width:800px;
+    height:auto;
+    background-color:var(--color3);
+    display:grid;
+    grid-template-columns: 800px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.container2{
+    margin: 20px auto;
+    width:800px;
+    height:auto;
+    background-color:var(--color3);
+    display:grid;
+    grid-template-columns: 400px 400px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.box{
+    background-color:var(--color1);
+    padding:20px;
+    border-radius:10px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    
+}
+
+#about {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#about .content-card {
+ 
+    width:75%;
+    justify-items: center;
+    display: flex;
+}
+
+#resume a {
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    background-color: var(--color4);
+    color: var(--color2);
+
+}
+#resume a:hover {
+    filter: none;
+    background-color: var(--color1);
+    color: var(--color3);
+
+}
+
+
+#resume .content-card {
+ 
+    width:75%;
+    justify-items: center;
+    display: flex;
+}
+
+#contact .content-card {
+ 
+    width:75%;
+    justify-items: center;
+    display: flex;
+}
+
+#contact a {
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    background-color: var(--color4);
+    color: var(--color2);
+
+}
+#contact a:hover {
+    filter: none;
+    background-color: var(--color1);
+    color: var(--color3);
+
+}
+
+#work .content-card {
+
+    padding: 5%;
+}
+
+#contact, #resume {
+    width: 100%;
+  
+ 
+}
+
+.content-card {
+    border-left: solid var(--color4) 5px;
+}
+
+a {
+    margin: 15px;
+    align-items: center;
+    width: fit-content;
+}
+
+a:hover {
+    filter: blur(5px);
+}
+
+nav a:hover  {
+    filter: none;
+    
+}
+
+
+@media (max-width: 767px) {
+    .container2 {
+        display: block;
+        width: auto;
+        height: fit-content;
+    }
+    .container1 {
+        display: block;
+        width: auto;
+        height: fit-content;
+    }
+    section {
+        display: block;
+    }
+    body {
+        display: block;
+    }
+    #about {
+        display: block;
+        width: auto;
+    }
+    #about p {
+        width: 100%;
+    }
+    #profile-container {
+        height: fit-content;
+    }
+    #description {
+        width: auto;
+    }
+    #about .content-card {
+        width: auto;
+    }
+    .box {
+        margin: 10px auto;
+        height: auto;
+    }
+    nav {
+        display: block;
+        width: auto;
+        margin-left: 15px;
+        
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+    ul {
+        margin: 0px;
+    }
+    p {
+        display: block;
+        width: fit-content;
+    }
+    h2 {
+        margin-top: 15px;
+    }
+}
+
+
+
