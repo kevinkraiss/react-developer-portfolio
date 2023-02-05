@@ -44,7 +44,7 @@ const Projects = () => {
     return(
       <>
         <h2>Projects</h2>
-        <p>this is where projects will go</p>
+        <p>Below are a selection of recent projects I have created. Click on a photo to open the application.</p>
         <Container>
 
         <BigProject/>

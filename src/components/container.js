@@ -1,6 +1,6 @@
 const Container = ({children, className}) => {
     return( 
-        <div className={`container ${className}`}>
+        <div className={`container`}>
             {children}
         </div>
         )

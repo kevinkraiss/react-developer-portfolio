@@ -1,5 +1,7 @@
 const footer = props => {
-    return 'footer'
+    return (
+        <footer>&copy; 2023</footer>
+    )
 }
 
 export default footer
