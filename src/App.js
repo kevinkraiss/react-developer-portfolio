@@ -7,20 +7,7 @@ import Page from './components/page'
 
 
 function App() {
-  // const [currentPage, setCurrentPage] = useState('home')
 
-  // const renderPage = () => {
-  //   if (currentPage === 'home') {
-  //     return <Home />
-  //   } else if (currentPage === 'about') {
-  //     return <About/>
-  //   } else if (currentPage === 'project') {
-  //     return <Project/>
-  //   }
-  //   else {
-  //     return <p>no matching page</p>
-  //   }
-  // }
   const [pages] = useState([
     {name: 'Home'},
     {name: 'About'},

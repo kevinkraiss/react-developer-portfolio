@@ -1,8 +1,22 @@
 :root{
-    --color1:rgb(137, 154, 136);
-    --color2:#eef0f0;
-    --color3:#d6d9d0;
-    --color4:#b7bdb0;
+    --primaryColor:#31493C;
+    --textColor:#B3EFB2;
+    --bgColor:#E8F1F2;
+    --color4:#001A23;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
 * {
@@ -10,7 +24,7 @@
 }
 
 body {
-    background-color: var(--color3);
+    background-color: var(--bgColor);
 
 }
 
@@ -44,7 +58,8 @@ nav {
 }
 
 header {
-    background-color: var(--color1);
+    background-color: var(--primaryColor);
+    height: 130px;
 }
 
 header ul {
@@ -52,32 +67,20 @@ header ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--color1);
+    background-color: var(--primaryColor);
   }
-/*   
-header li {
-    float: right;
-    border-bottom-left-radius: 15px;
-}
-  
-header li a {
-    display: block;
-    color: var(--color2);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-} */
+
 
 header button:hover {
-    background-color: var(--color3);
-    color: var(--color1);
+    background-color: var(--bgColor);
+    color: var(--primaryColor);
 }
 
 button {
     padding: 20px;
     margin: 10px;
-    color: var(--color2);
-    background-color: var(--color1);
+    color: var(--textColor);
+    background-color: var(--primaryColor);
     border-bottom-left-radius: 15px;
     width: 8vw;
     min-width: 90px;
@@ -88,16 +91,23 @@ button {
 h1 {
     display: inline-block;
     font-size: 48px;
-    padding: 5px 0px 5px 20px;
-    color: var(--color2);
+    padding: 5px 20px 5px 20px;
+    margin: 20px;
+    color: var(--textColor);
+    text-align: center;
 }
 
 h2 {
     font-size: 36px;
     padding: 0px 10px 0px 20px;
-    color: var(--color1);
+    color: var(--primaryColor);
     text-align: right;
     width: 15%;
+}
+
+h3, h4 {
+    color: var(--textColor);
+    text-align: center;
 }
 
 p {
@@ -113,8 +123,10 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     
 }
+
 
 #profile-pic {
     border: solid black 2px;
@@ -136,11 +148,14 @@ section {
 
 }
 
+.container {
+    min-width: 80%;
+}
+
 .container1{
-    margin: 20px auto;
     width:800px;
     height:auto;
-    background-color:var(--color3);
+    background-color:var(--bgColor);
     display:grid;
     grid-template-columns: 800px;
     grid-row: auto auto;
@@ -152,7 +167,7 @@ section {
     margin: 20px auto;
     width:800px;
     height:auto;
-    background-color:var(--color3);
+    background-color:var(--bgColor);
     display:grid;
     grid-template-columns: 400px 400px;
     grid-row: auto auto;
@@ -160,7 +175,7 @@ section {
     grid-row-gap: 20px;
 }
 .box{
-    background-color:var(--color1);
+    background-color:var(--primaryColor);
     padding:20px;
     border-radius:10px;
     color:#fff;
@@ -168,6 +183,7 @@ section {
     align-items:center;
     justify-content:center;
     font-size:40px;
+    flex-direction: column;
     
 }
 
@@ -188,13 +204,13 @@ section {
     margin: 10px;
     padding: 5px;
     background-color: var(--color4);
-    color: var(--color2);
+    color: var(--textColor);
 
 }
 #resume a:hover {
     filter: none;
-    background-color: var(--color1);
-    color: var(--color3);
+    background-color: var(--primaryColor);
+    color: var(--bgColor);
 
 }
 
@@ -218,18 +234,18 @@ section {
     margin: 10px;
     padding: 5px;
     background-color: var(--color4);
-    color: var(--color2);
+    color: var(--textColor);
 
 }
 #contact a:hover {
     filter: none;
-    background-color: var(--color1);
-    color: var(--color3);
+    background-color: var(--primaryColor);
+    color: var(--bgColor);
 
 }
 
 #work .content-card {
-
+    margin: auto;
     padding: 5%;
 }
 
@@ -245,7 +261,8 @@ section {
 
 a {
     margin: 15px;
-    align-items: center;
+    display: flex;
+    justify-content: center;
     width: fit-content;
 }
 
@@ -257,18 +274,29 @@ nav a:hover  {
     filter: none;
     
 }
+img {
+    width: 90%;
+}
+
+.box {
+    display: flex;
+    width: auto;
+    margin-left: 10%;
+    flex-direction: column;
+}
 
 
-@media (max-width: 767px) {
+@media (max-width: 790px) {
     .container2 {
         display: block;
         width: auto;
         height: fit-content;
     }
     .container1 {
-        display: block;
+        display: flex;
         width: auto;
         height: fit-content;
+       
     }
     section {
         display: block;
@@ -297,26 +325,44 @@ nav a:hover  {
         height: auto;
     }
     nav {
-        display: block;
-        width: auto;
-        margin-left: 15px;
-        
+        display: flex;
+        margin: auto;
+        align-items: center;
+        padding: 0%;
+        margin-top: 10px;
+        min-width: 440px;
     }
+    header {
+        min-width: 440px;
+    }
+    
 
     h2 {
-        width: 100%;
+        width: auto;
+        height: auto;
         text-align: center;
+        display: inline-block;
+        align-items: center;
+        padding: 0%;
+        margin: 10px 38vw;
+        padding: 0px;
     }
     ul {
         margin: 0px;
+        width: auto;
     }
     p {
         display: block;
         width: fit-content;
     }
-    h2 {
-        margin-top: 15px;
+    section {
+        width: auto;
     }
+
+    .container {
+        width: auto;
+    }
+
 }
 
 

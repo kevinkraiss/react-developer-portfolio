@@ -1,8 +1,61 @@
+import { useState } from 'react'
+
+
+import BigProject from '../components/bigProject';
+import SmallProject from '../components/smallProject';
+import Container from '../components/container';
+
+// import plc from '../images/placeholder.png'
+import devq from '../images/devq.png'
+import pwsg from '../images/pwsg.png'
+import mff from '../images/mff.png'
+import wdb from '../images/wdb.png'
+
+
 const Projects = () => {
+
+  const [projectArray] = useState(
+        
+    [
+        {
+            name: 'Developer Quiz',
+            href: 'https://kevinkraiss.github.io/developer-quiz/',
+            src: devq
+        },
+        {
+            name: 'Mood for Food',
+            href: 'https://kevinkraiss.github.io/mood-for-food/',
+            src: mff
+        },
+        {
+          name: 'Weather Dashboard',
+          href: 'https://kevinkraiss.github.io/forecast-dashboard/',
+          src: wdb
+       },
+        {
+          name: 'Pre-Work Study Guide',
+          href: 'https://kevinkraiss.github.io/prework-study-guide/',
+          src: pwsg
+       },
+    ])
+
+    const [currentProj, setCurrentProj] = useState(projectArray[0])
+
     return(
       <>
         <h2>Projects</h2>
         <p>this is where projects will go</p>
+        <Container>
+
+        <BigProject/>
+        <SmallProject
+        projectArray={projectArray}
+        setCurrentProj={setCurrentProj}
+        currentProj={currentProj}
+        >
+
+        </SmallProject>
+        </Container>
       </>  
     ) 
 }
