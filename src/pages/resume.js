@@ -5,8 +5,17 @@ const Resume = () => {
         <>
             <h2>Resume</h2>
             <section>
-
             <p>This placeholder resume will be updated shortly.</p>
+            
+            <a 
+            href={resPlc} download="placeholderResume" target='_blank'
+            rel="noreferrer"
+            className='ghLink'
+            >
+                <button className="dlBtn">
+                Download Resume
+                </button>
+            </a>
 
             <img alt='resume placeholder' src={resPlc}/>
 

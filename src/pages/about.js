@@ -1,9 +1,12 @@
 import profilePic from '../images/profile-pic.jpg'
+import splash from '../images/splash.svg'
+
 
 const About = () => {
     return (
         <>
             <h2>About</h2>
+        <img className={'splash'} alt='my portfolio' src={splash}/>
             <section id="about">
 
             <div className="content-card">

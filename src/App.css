@@ -42,9 +42,93 @@ footer {
     text-align: center;
 }
 
-img {
+.icons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 60px;
+    color: var(--textColor);
+    padding: 0%;
+    margin: 0%;
+}
+
+.icons a{
+    margin: 0%;
+    padding: 0%;
+    color: var(--textColor);
+}
+
+.icons a:hover {
+    filter: none;
+}
+
+.content-card img {
     border-radius: 15px;
 
+}
+.splash  {
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.ghLink {
+    font-size: 24px;
+    color: #B3EFB2;
+}
+.ghLink:hover {
+    filter: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+
+input[type=text] {
+    font-size: 15px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 3px solid var(--primaryColor);
+  }
+
+input[type=email] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+}
+
+input[type=email]:focus {
+    border: 3px solid var(--primaryColor);
+}
+
+input[type=tel] {
+    font-size: 15px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=tel]:focus {
+    border: 3px solid var(--primaryColor);
+  }
+
+input[type=submit] {
+    padding: 5px;
+}
+
+.dlBtn {
+    width: 200px;
+    border-radius: 15px;
 }
 
 ul {

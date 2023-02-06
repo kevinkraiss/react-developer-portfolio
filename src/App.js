@@ -9,9 +9,9 @@ import Page from './components/page'
 function App() {
 
   const [pages] = useState([
-    {name: 'Home'},
     {name: 'About'},
     {name: 'Projects'},
+    {name: 'Contact'},
     {name: 'Resume'}
   ])
 

@@ -20,22 +20,26 @@ const Projects = () => {
         {
             name: 'Developer Quiz',
             href: 'https://kevinkraiss.github.io/developer-quiz/',
-            src: devq
+            src: devq,
+            gh: 'https://github.com/kevinkraiss/developer-quiz'
         },
         {
             name: 'Mood for Food',
             href: 'https://kevinkraiss.github.io/mood-for-food/',
-            src: mff
+            src: mff,
+            gh: 'https://github.com/kevinkraiss/mood-for-food'
         },
         {
           name: 'Weather Dashboard',
           href: 'https://kevinkraiss.github.io/forecast-dashboard/',
-          src: wdb
+          src: wdb,
+          gh: 'https://github.com/kevinkraiss/forecast-dashboard'
        },
         {
           name: 'Pre-Work Study Guide',
           href: 'https://kevinkraiss.github.io/prework-study-guide/',
-          src: pwsg
+          src: pwsg,
+          gh: 'https://github.com/kevinkraiss/prework-study-guide'
        },
     ])
 

@@ -20,6 +20,10 @@ const SmallProject = props => {
                                     <img alt='alt' src={Project.src}/>
                                 </a>
                                 <h4>{Project.name}</h4>
+                                <a
+                                className="ghLink"
+                                href={Project.gh}
+                                >GitHub Repo</a>
                         </div>
                     )
                 )}
